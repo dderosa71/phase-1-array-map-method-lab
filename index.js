@@ -11,19 +11,19 @@ const tutorials = [
   'what is JSONP?'
 ];
 
+ 
+function capitalizeOneWord(word){
+  word.toLowerCase()
+  return `${word[0].toUpperCase()}${word.slice(1)}`
+}
 
 function capitalize(line){
   let splitWords = line.split(" ");
   return splitWords.map(word => capitalizeOneWord(word))
                    .join(" ")
     }
-  
-  function capitalizeOneWord(word){
-    word.toLowerCase()
-    return `${word[0].toUpperCase()}${word.slice(1)}`
-  }
 
-const titleCased = (data) => {
-  return data.map(line => capitalize(line));
+const titleCased = (input) => {
+  return tutorials.map(line => capitalize(line));
 }
 
